@@ -7,7 +7,7 @@
 	// Set your client key and secret
 	$client_key = "d4293be587513a276a3f95cfa4817971";
 	$client_secret = "ffad61e202e8512348c521214b935239";
-	$redirect_uri = "http://talesbv.trans-dsv01.terra.com.br/php-readmill/examples/index.php";
+	$redirect_uri = "http://php-readmill.localhost/examples/index.php";
 	
 	// Load the Readmill API library
 	$readmill = new ReadmillAPI($client_key,$client_secret);

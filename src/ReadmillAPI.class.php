@@ -118,8 +118,7 @@ class ReadmillApi {
 		
 		// Populate data for the GET request
 		if($type == HTTP_GET) $url = $this->MakeUrl($url,$params);
-		echo $url;
-
+		
 		// borrowed from Andy Langton: http://andylangton.co.uk/
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL,$url);

@@ -14,14 +14,35 @@
 
 	$readmill->SetAccessToken($token);
 	
-	// Perform a request to a authenticated-only resource
-	$response = $readmill->GetPrivate("readings", false, false);
+	// Get current User
+	$response = $readmill->GetPrivate("me", false, false);
 	$me = json_decode($response);
+
+	// Get readings from current user
+	$response = $readmill->GetPrivate("/users/".$me->id."/readings", false, false);
+	$readings = json_decode($response);
 	
 ?>
-	<pre>
-	<?php echo($response); ?>
-	</pre>
+	<table>
+	<tr>
+		<th>Book</th><th>Duration</th><th>No. Highlights</th><th>Highlights</th>
+	</tr>
+	<?php 
+		foreach ($readings as $read){
+	?>
+	<tr>
+	<?php
+			echo '<td>'.$read->book->title.'</td>';
+			echo '<td>'.$read->duration.'</td>';
+			echo '<td>'.$read->highlights_count.'</td>';
+			echo '<td>'.$read->highlights.'</td>';
+	?>
+	</tr>
+	<?php
+		}
+	
+	?>
+	</table>
 </body>
 </html>
 
