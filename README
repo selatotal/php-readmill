@@ -5,6 +5,13 @@ I couldn't find a php library for the Readmill API that encapsulated all the fun
 of the API while still remaining easy to plug in to an application quickly. This library seeks
 to fill that need
 
+About Readmill
+--------------
+
+Readmill is a curious community of readers, highlighting and sharing the books they love.
+It's available on http://readmill.com
+
+
 What this library does
 ----------------------
 
