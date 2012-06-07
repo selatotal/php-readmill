@@ -46,6 +46,11 @@ This library does not deal with the management of your tokens - only the interac
 your code and the Readmill API. If you are using it in an application that needs to use user
 data via an auth_token, you will need to handle the storage of tokens for usage at later dates.
 
+Houston, I have a Problem
+-------------------------
+
+Feel free to contact me if you have any problem with this library
+
 Origin
 ------
 
