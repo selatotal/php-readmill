@@ -22,8 +22,8 @@
 ?>
 <hr />
 	<a href='current_user.php'>Current User</a><br>
-	<a href='highlights.php'>Highlights</a><br>
-	<a href='readings.php'>Readings</a><br>
+	<a href='readings.php'>User's Readings</a><br>
+	<a href='highlights.php'>Last Highlights</a><br>
 	<a href='logout.php'>Logout</a><br>
 <?php
 	}

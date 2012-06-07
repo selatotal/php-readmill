@@ -5,7 +5,7 @@
  * 
  * @package php-readmill 
  * @author Tales Viegas <selatotal@gmail.com>, @selatotal
- * @version 0.0.1
+ * @version 1.0.0
  * @license GPLv3 <http://www.gnu.org/licenses/gpl.txt>
  */
 
@@ -214,6 +214,7 @@ class ReadmillApi {
 	 * AuthenticationLink
 	 * Returns a link to the Readmill web authentication page.
 	 * @param String $redirect The configured redirect_uri for the provided client credentials
+	 * @param $noexpire Sent to Readmill option to no-expire Token
 	 */
 	public function AuthenticationLink($redirect='',$noexpire=false){
         	if ( 0 === strlen( $redirect ) ) {

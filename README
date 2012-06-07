@@ -1,2 +1,52 @@
-This project is in development.
-Please don't use it, yet
+README
+======
+
+I couldn't find a php library for the Readmill API that encapsulated all the functionality
+of the API while still remaining easy to plug in to an application quickly. This library seeks
+to fill that need
+
+What this library does
+----------------------
+
+Provides wrappers for php applications to make requests to both public and authenticated-only
+resources on Readmill. As well it provides functions that encapsulate the main methods needed
+to retrieve an auth_token for a user from Readmill.
+
+What are the basic methods?
+---------------------------
+
+	GetPublic($endpoint[,$params])
+		Performs a request using your $client_id and $client_secret to a public api resource
+		$endpoint is the api endpoint
+		$params is an associative array of parameters to pass
+		Note: You don't need to add client_id and client_secret to $params
+		
+	GetPrivate($endpoint[,$params])
+		Peforms a request using your $auth_token to a private api resource
+		$endpoint is the api endpoint
+		$params is an associative array of parameters to pass
+		Note: You don't need to add oauth_token to $params
+		
+	AuthenticationLink($redirect[,noexpire])
+		Returns a link to the Readmill web authentication page
+		$redirect is your configured redirect_uri
+		$noexpire Sent to Readmill option to no-expire Token
+		Note: the $redirect provided must match the one you inserted when requesting your $client_id on Readmill
+		
+	GetToken($code,$redirect)
+		Returns a valid Readmill auth_token
+		$code is the code GET param supplied by the Readmill web auth to your redirect_uri
+		$redirect is your configured redirect_uri
+		Note: the $redirect provided must match the one you inserted when requesting your $client_id on Readmill
+
+What else do I need?
+--------------------
+
+This library does not deal with the management of your tokens - only the interaction between
+your code and the Readmill API. If you are using it in an application that needs to use user
+data via an auth_token, you will need to handle the storage of tokens for usage at later dates.
+
+Origin
+------
+
+This library is based on php-foursquare API, by Stephen Young (https://github.com/stephenyoung/php-foursquare)

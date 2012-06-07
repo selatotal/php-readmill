@@ -19,9 +19,16 @@
 	$me = json_decode($response);
 	
 ?>
-	<pre>
-	<?php echo($response); ?>
-	</pre>
+	<p><img src="<?php echo $me->avatar_url;?>" />
+	<p>User: <?php echo $me->username; ?></p>
+	<p>Name: <?php echo $me->fullname; ?></p>
+	<p>City/Country: <?php echo $me->city.'/'.$me->country; ?></p>
+	<p>Books Finished: <?php echo $me->books_finished; ?></p>
+	<p>Books Abandoned: <?php echo $me->books_abandoned; ?></p>
+	<p>Profile: <a href="<?php echo $me->permalink_url; ?>">Profile</a></p>
+	<hr />
+	<a href="index.php">Home</a>
+		
 </body>
 </html>
 

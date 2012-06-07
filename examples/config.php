@@ -23,7 +23,6 @@
 			$token = $_COOKIE['readmill_test'];
 		}
 	}
-	echo 'Token: '.$token;
 	
 ?>	
 
