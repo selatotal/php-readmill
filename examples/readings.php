@@ -34,7 +34,9 @@
 	<?php
 			echo '<td>'.$read->book->title.'</td>';
 			echo '<td>'.$read->duration.'</td>';
-			echo '<td>'.$read->highlights_count.'</td>';
+			echo '<td><a href="highlights.php?idReading='.$read->id.'">';
+			echo $read->highlights_count;
+			echo '</a></td>';
 			echo '<td>'.$read->highlights.'</td>';
 	?>
 	</tr>
