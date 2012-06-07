@@ -5,9 +5,9 @@
 	error_reporting(E_ALL ^ E_NOTICE);
 	
 	// Set your client key and secret
-	$client_key = "d4293be587513a276a3f95cfa4817971";
-	$client_secret = "ffad61e202e8512348c521214b935239";
-	$redirect_uri = "http://php-readmill.localhost/examples/index.php";
+	$client_key = "YOUR-API-KEY-HERE";
+	$client_secret = "YOUR-API-SECRET-HERE";
+	$redirect_uri = "YOUR-API-URI-REDIRECT-HERE";
 	
 	// Load the Readmill API library
 	$readmill = new ReadmillAPI($client_key,$client_secret);
